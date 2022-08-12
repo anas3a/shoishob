@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:shoishob/Screens/WelcomePage.dart';
+import 'package:shoishob/Screens/welcome_page.dart';
 
 void main() {
   runApp(const MyApp());
