@@ -1,8 +1,7 @@
-# Shoishob
-
 An iOS and Android-based cross-platform applications aimed at the 3rd SDG goal (Good Health and Well-being) by facilitating sports tournaments, and ‘Shoishob events’ at particular assigned fields and locations named "SHOISHOB ZONES".
 
 
+## Project Shoishob
 While the nation is going through a major screen addiction problem, the COVID-19 pandemic made it worse. Frustration, laziness, not finding peace of mind, and so on are observed in young society. No mischief of childhood and a big void of sufficient playgrounds where the sound of victory will be joyful. There are no effective and available resources to get rid of such a miserable environment with sound health. It is then that "Shoishob" emerges by utilizing technology and unused spaces, as well as renovating existing playgrounds and school fields bringing all the facilities of modern playgrounds.
 
 The current generation is very fascinated with e-sports. Our primary aim is to bring the same fun into real-life sports and make the children equally fascinated with it if not more. The goal of our team is to utilize smartphones for the good cause. Our iOS and Android-based cross-platform applications are aimed at the 3rd SDG goal (Good Health and Well-being) by facilitating sports tournaments, and ‘Shoishob events’ at particular assigned fields and locations named "SHOISHOB ZONES". This participation is not for mere entertainment either. Through this, children will achieve leadership qualities with self-confidence, make playmates, and the points earned through good performance and match wins can be credited for goodies and consistently upgraded rewards. To mimic the dopamine rush of e-sports, we will use our smart app to track participants' performances and use the data to construct leaderboards that incorporate both social and age-appropriate online recognition and bragging rights.
