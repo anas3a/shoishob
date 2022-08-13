@@ -10,24 +10,32 @@ class LogInPage extends StatefulWidget {
 class _LogInPageState extends State<LogInPage> {
   @override
   Widget build(BuildContext context) {
+    var size = MediaQuery.of(context).size;
+
+    bool isOrientationLandscape(){
+      return size.width > size.height;
+    }
+
     return Scaffold(
-      body: SingleChildScrollView(
-        child: Container(
-          constraints: BoxConstraints(
-            maxHeight: MediaQuery.of(context).size.height,
-            maxWidth: MediaQuery.of(context).size.width,
-          ),
-          decoration: const BoxDecoration(color: Colors.white),
+      body: Container(
+        constraints: BoxConstraints(
+          maxHeight: MediaQuery.of(context).size.height,
+          maxWidth: MediaQuery.of(context).size.width,
+        ),
+        decoration: const BoxDecoration(color: Colors.white),
+        child: SingleChildScrollView(
           child: Padding(
-            padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 40),
+            padding: EdgeInsets.symmetric(vertical: 20, horizontal: isOrientationLandscape() ? size.width * .15 : 40),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const SizedBox(
-                  height: 0,
+                Center(
+                  child: Image.asset('assets/images/logInPageLogo.png',
+                  width: !isOrientationLandscape() ? size.width * .81 : size.height * .61,
+                  height: !isOrientationLandscape() ? size.width * .81 : size.height * .61,
+                  ),
                 ),
-                Image.asset('assets/images/logInPageLogo.png'),
                 const SizedBox(
                   height: 50,
                 ),
@@ -95,30 +103,53 @@ class _LogInPageState extends State<LogInPage> {
                 ),
                 Align(
                   alignment: Alignment.bottomRight,
-                  child: SizedBox(
-                    width: MediaQuery.of(context).size.width * 0.3,
-                    child: ElevatedButton(
-                      onPressed: () {
-                        // Navigator.pop(context);
-                        // Navigator.pushNamed(context, '/logIn_page');
-                      },
-                      style: ElevatedButton.styleFrom(
-                        primary: const Color(0xFF8C77CE),
-                        shadowColor: Colors.deepPurple,
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(12),
-                        ),
-                        elevation: 10.0,
+                  child: GestureDetector(
+                    onTap: (){
+
+                    },
+                    child: Card(
+                      color: const Color(0xFF8C77CE),
+                      elevation: 7,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(15),
                       ),
-                      child: const Text(
-                        'LOGIN',
-                        style: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.w400,
+                      child: const Padding(
+                        padding: EdgeInsets.fromLTRB(15,7,15,7),
+                        child: Text(
+                          'Login',
+                          style: TextStyle(
+                            fontSize: 17,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white
+                          ),
                         ),
                       ),
                     ),
                   ),
+                  // child: SizedBox(
+                  //   width: MediaQuery.of(context).size.width * 0.3,
+                  //   child: ElevatedButton(
+                  //     onPressed: () {
+                  //       // Navigator.pop(context);
+                  //       // Navigator.pushNamed(context, '/logIn_page');
+                  //     },
+                  //     style: ElevatedButton.styleFrom(
+                  //       primary: const Color(0xFF8C77CE),
+                  //       shadowColor: Colors.deepPurple,
+                  //       shape: RoundedRectangleBorder(
+                  //         borderRadius: BorderRadius.circular(12),
+                  //       ),
+                  //       elevation: 10.0,
+                  //     ),
+                  //     child: const Text(
+                  //       'LOGIN',
+                  //       style: TextStyle(
+                  //         fontSize: 20,
+                  //         fontWeight: FontWeight.w400,
+                  //       ),
+                  //     ),
+                  //   ),
+                  // ),
                 ),
                 const SizedBox(
                   height: 15,
