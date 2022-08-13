@@ -61,9 +61,13 @@ class _WelcomePageState extends State<WelcomePage> {
                     child: SizedBox(
                       width: MediaQuery.of(context).size.width * 0.3,
                       child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          // Navigator.pop(context);
+                          Navigator.pushNamed(context, '/logIn_page');
+                        },
                         style: ElevatedButton.styleFrom(
                           primary: Colors.white,
+                          shadowColor: Colors.deepPurple,
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(20),
                           ),
