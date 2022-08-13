@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.centillion.shoishob">
    <application
-        android:label="shoishob"
+        android:label="Shoishob"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

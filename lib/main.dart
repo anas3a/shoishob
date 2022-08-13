@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shoishob/Screens/welcome_page.dart';
+import 'package:shoishob/Screens/login_page.dart';
+import 'package:shoishob/Screens/signup_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -8,17 +10,18 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Shoishob',
       theme: ThemeData(
-        primarySwatch: Colors.grey,
+        primarySwatch: Colors.deepPurple,
       ),
       initialRoute: '/',
       routes: {
         '/': (context) => const WelcomePage(),
+        '/logIn_page': (context) => const LogInPage(),
+        '/singUp_page': (context) => const SignUpPage(),
       },
     );
   }
