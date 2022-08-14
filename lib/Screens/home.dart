@@ -9,15 +9,16 @@ class Home extends StatefulWidget {
   State<Home> createState() => _HomeState();
 }
 
-class _HomeState extends State<Home> with TickerProviderStateMixin{
+class _HomeState extends State<Home> with TickerProviderStateMixin {
   var _bottomNavIndex = 0;
+
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
 
     final iconList = <IconData>[
-      Icons.home_filled,
-      Icons.stars,
+      Icons.home_outlined,
+      Icons.star_border_purple500_rounded,
       // Icons.brightness_5,
       // Icons.brightness_4,
       // Icons.brightness_6,
@@ -30,23 +31,27 @@ class _HomeState extends State<Home> with TickerProviderStateMixin{
     return Scaffold(
       floatingActionButton: FloatingActionButton(
         child: Container(
-          width: 60,
-          height: 60,
-          decoration: const BoxDecoration(
-              shape: BoxShape.circle,
-              gradient: LinearGradient(colors: [Color(0xffAD9BFF), Color(0xff9079FB)])
-          ),
-          child: Center(child: Image.asset('assets/images/trending.png', width: 35, height: 35,))
-        ),
-        onPressed: () {  },
+            width: 60,
+            height: 60,
+            decoration: const BoxDecoration(
+                shape: BoxShape.circle,
+                gradient: LinearGradient(
+                    colors: [Color(0xffAD9BFF), Color(0xff9079FB)])),
+            child: Center(
+                child: Image.asset(
+              'assets/images/trending.png',
+              width: 35,
+              height: 35,
+            ))),
+        onPressed: () {},
         //params
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: AnimatedBottomNavigationBar(
         icons: iconList,
         backgroundColor: const Color(0xffAD9BFF),
-        inactiveColor: Colors.white54,
-        activeColor: Colors.white,
+        // inactiveColor: Colors.white54,
+        // activeColor: Colors.white,
         activeIndex: _bottomNavIndex,
         iconSize: 30,
         splashRadius: 31,
@@ -389,8 +394,7 @@ class _HomeState extends State<Home> with TickerProviderStateMixin{
                                     children: [
                                       // SizedBox(height: (size.width - 44 - 16) * .01),
                                       Padding(
-                                        padding: const EdgeInsets.only(
-                                            top: 8.0, left: 3),
+                                        padding: const EdgeInsets.only(left: 3),
                                         child: Image.asset(
                                           'assets/images/busLogo.png',
                                           width: (size.width - 44 - 16) * .21,
@@ -489,8 +493,7 @@ class _HomeState extends State<Home> with TickerProviderStateMixin{
                                     children: [
                                       // SizedBox(height: (size.width - 44 - 16) * .01),
                                       Padding(
-                                        padding: const EdgeInsets.only(
-                                            top: 8.0, left: 3),
+                                        padding: const EdgeInsets.only(left: 3),
                                         child: Image.asset(
                                           'assets/images/healthLogo.png',
                                           width: (size.width - 44 - 16) * .21,
