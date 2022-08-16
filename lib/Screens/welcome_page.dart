@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:animated_text_kit/animated_text_kit.dart';
 
 class WelcomePage extends StatefulWidget {
   const WelcomePage({Key? key}) : super(key: key);
@@ -40,15 +41,24 @@ class _WelcomePageState extends State<WelcomePage> {
                     ),
                   ),
                 ),
-                const Padding(
+                Padding(
                   padding: EdgeInsets.only(left: 70),
-                  child: Text(
-                    'to The Shoishob',
-                    style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.w700,
-                      color: Color(0xFFD64682),
-                    ),
+                  child: AnimatedTextKit(
+                    animatedTexts: [
+                      TypewriterAnimatedText(
+                        'to Shoishob',
+                        textStyle: const TextStyle(
+                          fontSize: 25,
+                          fontWeight: FontWeight.w700,
+                          color: Color(0xFFD64682),
+                        ),
+                        speed: const Duration(milliseconds: 200),
+                      ),
+                    ],
+                    repeatForever: true,
+                    pause: const Duration(milliseconds: 1000),
+                    displayFullTextOnTap: true,
+                    stopPauseOnTap: true,
                   ),
                 ),
                 const SizedBox(
