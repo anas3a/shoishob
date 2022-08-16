@@ -2,6 +2,7 @@ import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.da
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:shoishob/Screens/health_page.dart';
+import 'package:shoishob/Screens/ranking_page.dart';
 import 'package:shoishob/Screens/transportation_page.dart';
 
 class Home extends StatefulWidget {
@@ -141,6 +142,9 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                   const SizedBox(
                     height: 11,
                   ),
+
+
+
                   SizedBox(
                     width: size.width,
                     height: size.width * .59,
@@ -253,6 +257,9 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                       ],
                     ),
                   ),
+
+
+
                   const SizedBox(
                     height: 11,
                   ),
@@ -576,96 +583,101 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                           ),
                           Padding(
                             padding: const EdgeInsets.all(4.0),
-                            child: Container(
-                              width: (size.width - 44 - 16) * .5,
-                              // height: (size.width - 44 - 16) * .5,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(25),
-                                gradient: const LinearGradient(
-                                  colors: [
-                                    Color(0xff89D7FD),
-                                    Color(0xff5ABCED)
-                                  ],
-                                  begin: Alignment.topRight,
-                                  end: Alignment.bottomLeft,
-                                ),
-                                boxShadow: const [
-                                  BoxShadow(
-                                    color: Color(0xff89D7FD),
-                                    offset: Offset(
-                                      1.0,
-                                      5.0,
-                                    ),
-                                    blurRadius: 19.0,
-                                    spreadRadius: 5.0,
-                                  ), //BoxShadow
-                                  BoxShadow(
-                                    color: Colors.white,
-                                    offset: Offset(0.0, 0.0),
-                                    blurRadius: 0.0,
-                                    spreadRadius: 0.0,
-                                  ), //BoxShadow
-                                ],
-                                // color: Color(0xffAD9BFF),
-                              ),
-                              child: Stack(
-                                children: [
-                                  const Positioned(
-                                      right: 11,
-                                      top: 17,
-                                      child: Icon(Icons.arrow_forward_ios,
-                                          color: Colors.white)),
-                                  Column(
-                                    mainAxisAlignment: MainAxisAlignment.start,
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      SizedBox(
-                                          height: (size.width - 44 - 16) * .11),
-                                      Padding(
-                                        padding: const EdgeInsets.only(
-                                            top: 8.0, left: 3),
-                                        child: Image.asset(
-                                          'assets/images/rankingLogo.png',
-                                          width: (size.width - 44 - 16) * .21,
-                                          height: (size.width - 44 - 16) * .21,
-                                        ),
-                                      ),
-                                      const Padding(
-                                        padding: EdgeInsets.only(left: 15.0),
-                                        child: Text(
-                                          'Ranking',
-                                          style: TextStyle(
-                                              color: Colors.white,
-                                              fontSize: 19,
-                                              fontWeight: FontWeight.bold),
-                                        ),
-                                      ),
-                                      const Padding(
-                                        padding: EdgeInsets.only(
-                                            left: 15.0, top: 11),
-                                        child: Text(
-                                          '★ 4.9',
-                                          style: TextStyle(
-                                              color: Colors.white,
-                                              fontSize: 16,
-                                              fontWeight: FontWeight.w500),
-                                        ),
-                                      ),
-                                      const Padding(
-                                        padding: EdgeInsets.only(
-                                            left: 15.0, bottom: 17),
-                                        child: Text(
-                                          '2468 reviews',
-                                          style: TextStyle(
-                                              color: Colors.white,
-                                              fontSize: 13,
-                                              fontWeight: FontWeight.w300),
-                                        ),
-                                      ),
+                            child: GestureDetector(
+                              onTap: (){
+                                Navigator.push(context, MaterialPageRoute(builder: (context) => const RankingPage()));
+                              },
+                              child: Container(
+                                width: (size.width - 44 - 16) * .5,
+                                // height: (size.width - 44 - 16) * .5,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(25),
+                                  gradient: const LinearGradient(
+                                    colors: [
+                                      Color(0xff89D7FD),
+                                      Color(0xff5ABCED)
                                     ],
+                                    begin: Alignment.topRight,
+                                    end: Alignment.bottomLeft,
                                   ),
-                                ],
+                                  boxShadow: const [
+                                    BoxShadow(
+                                      color: Color(0xff89D7FD),
+                                      offset: Offset(
+                                        1.0,
+                                        5.0,
+                                      ),
+                                      blurRadius: 19.0,
+                                      spreadRadius: 5.0,
+                                    ), //BoxShadow
+                                    BoxShadow(
+                                      color: Colors.white,
+                                      offset: Offset(0.0, 0.0),
+                                      blurRadius: 0.0,
+                                      spreadRadius: 0.0,
+                                    ), //BoxShadow
+                                  ],
+                                  // color: Color(0xffAD9BFF),
+                                ),
+                                child: Stack(
+                                  children: [
+                                    const Positioned(
+                                        right: 11,
+                                        top: 17,
+                                        child: Icon(Icons.arrow_forward_ios,
+                                            color: Colors.white)),
+                                    Column(
+                                      mainAxisAlignment: MainAxisAlignment.start,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        SizedBox(
+                                            height: (size.width - 44 - 16) * .11),
+                                        Padding(
+                                          padding: const EdgeInsets.only(
+                                              top: 8.0, left: 3),
+                                          child: Image.asset(
+                                            'assets/images/rankingLogo.png',
+                                            width: (size.width - 44 - 16) * .21,
+                                            height: (size.width - 44 - 16) * .21,
+                                          ),
+                                        ),
+                                        const Padding(
+                                          padding: EdgeInsets.only(left: 15.0),
+                                          child: Text(
+                                            'Ranking',
+                                            style: TextStyle(
+                                                color: Colors.white,
+                                                fontSize: 19,
+                                                fontWeight: FontWeight.bold),
+                                          ),
+                                        ),
+                                        const Padding(
+                                          padding: EdgeInsets.only(
+                                              left: 15.0, top: 11),
+                                          child: Text(
+                                            '★ 4.9',
+                                            style: TextStyle(
+                                                color: Colors.white,
+                                                fontSize: 16,
+                                                fontWeight: FontWeight.w500),
+                                          ),
+                                        ),
+                                        const Padding(
+                                          padding: EdgeInsets.only(
+                                              left: 15.0, bottom: 17),
+                                          child: Text(
+                                            '2468 reviews',
+                                            style: TextStyle(
+                                                color: Colors.white,
+                                                fontSize: 13,
+                                                fontWeight: FontWeight.w300),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ],
+                                ),
                               ),
                             ),
                           ),
