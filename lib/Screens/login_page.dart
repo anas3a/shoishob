@@ -17,6 +17,7 @@ class _LogInPageState extends State<LogInPage> {
     }
 
     return Scaffold(
+      backgroundColor: Colors.white,
       body: Container(
         constraints: BoxConstraints(
           maxHeight: MediaQuery.of(context).size.height,
