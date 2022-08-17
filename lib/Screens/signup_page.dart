@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+import 'home.dart';
+
 class SignUpPage extends StatefulWidget {
   const SignUpPage({Key? key}) : super(key: key);
 
@@ -11,16 +13,23 @@ class SignUpPage extends StatefulWidget {
 class _SignUpPageState extends State<SignUpPage> {
   @override
   Widget build(BuildContext context) {
+    var size = MediaQuery.of(context).size;
+
+    bool isOrientationLandscape(){
+      return size.width > size.height;
+    }
+
     return Scaffold(
-      body: SingleChildScrollView(
-        child: Container(
-          constraints: BoxConstraints(
-            maxHeight: MediaQuery.of(context).size.height,
-            maxWidth: MediaQuery.of(context).size.width,
-          ),
-          decoration: const BoxDecoration(color: Colors.white),
+      backgroundColor: Colors.white,
+      body: Container(
+        constraints: BoxConstraints(
+          maxHeight: MediaQuery.of(context).size.height,
+          maxWidth: MediaQuery.of(context).size.width,
+        ),
+        decoration: const BoxDecoration(color: Colors.white),
+        child: SingleChildScrollView(
           child: Padding(
-            padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 40),
+            padding: EdgeInsets.symmetric(vertical: 20, horizontal: isOrientationLandscape() ? size.width * .15 : 40),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -30,7 +39,8 @@ class _SignUpPageState extends State<SignUpPage> {
                 ),
                 Center(
                     child: Image.asset('assets/images/signUpPageLogo.png',
-                        height: 250)),
+                      width: !isOrientationLandscape() ? size.width * .71 : size.height * .61,
+                      height: !isOrientationLandscape() ? size.width * .71 : size.height * .61,)),
                 const SizedBox(
                   height: 25,
                 ),
@@ -139,26 +149,29 @@ class _SignUpPageState extends State<SignUpPage> {
                 ),
                 Align(
                   alignment: Alignment.bottomRight,
-                  child: SizedBox(
-                    width: MediaQuery.of(context).size.width * 0.3,
-                    child: ElevatedButton(
-                      onPressed: () {
-                        // Navigator.pop(context);
-                        // Navigator.pushNamed(context, '/logIn_page');
-                      },
-                      style: ElevatedButton.styleFrom(
-                        primary: const Color(0xFF8C77CE),
-                        shadowColor: Colors.deepPurple,
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(12),
-                        ),
-                        elevation: 10.0,
+                  child: GestureDetector(
+                    onTap: (){
+
+                      Navigator.of(context).push(
+                          MaterialPageRoute(builder: (context) => const Home())
+                      );
+
+                    },
+                    child: Card(
+                      color: const Color(0xFF8C77CE),
+                      elevation: 7,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(15),
                       ),
-                      child: const Text(
-                        'Sign up',
-                        style: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.w400,
+                      child: const Padding(
+                        padding: EdgeInsets.fromLTRB(15,7,15,7),
+                        child: Text(
+                          'Sign up',
+                          style: TextStyle(
+                              fontSize: 17,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white
+                          ),
                         ),
                       ),
                     ),
