@@ -80,7 +80,8 @@ class _SignUpPageState extends State<SignUpPage> {
                   child: TextField(
                     keyboardType: TextInputType.number,
                     inputFormatters: <TextInputFormatter>[
-                  FilteringTextInputFormatter.digitsOnly],
+                      FilteringTextInputFormatter.digitsOnly
+                    ],
                     decoration: const InputDecoration(
                       labelText: 'Age',
                       border: InputBorder.none,
@@ -143,8 +144,8 @@ class _SignUpPageState extends State<SignUpPage> {
                     width: MediaQuery.of(context).size.width * 0.3,
                     child: ElevatedButton(
                       onPressed: () {
-                        // Navigator.pop(context);
-                        // Navigator.pushNamed(context, '/logIn_page');
+                        Navigator.pop(context);
+                        Navigator.pushNamed(context, '/home');
                       },
                       style: ElevatedButton.styleFrom(
                         primary: const Color(0xFF8C77CE),

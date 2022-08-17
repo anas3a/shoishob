@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:shoishob/Screens/home.dart';
 
 class LogInPage extends StatefulWidget {
   const LogInPage({Key? key}) : super(key: key);
@@ -105,12 +104,9 @@ class _LogInPageState extends State<LogInPage> {
                 Align(
                   alignment: Alignment.bottomRight,
                   child: GestureDetector(
-                    onTap: (){
-
-                      Navigator.of(context).push(
-                        MaterialPageRoute(builder: (context) => const Home())
-                      );
-
+                    onTap: () {
+                      Navigator.pop(context);
+                      Navigator.pushNamed(context, '/home');
                     },
                     child: Card(
                       color: const Color(0xFF8C77CE),
@@ -119,14 +115,13 @@ class _LogInPageState extends State<LogInPage> {
                         borderRadius: BorderRadius.circular(15),
                       ),
                       child: const Padding(
-                        padding: EdgeInsets.fromLTRB(15,7,15,7),
+                        padding: EdgeInsets.fromLTRB(15, 7, 15, 7),
                         child: Text(
                           'Login',
                           style: TextStyle(
-                            fontSize: 17,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white
-                          ),
+                              fontSize: 17,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white),
                         ),
                       ),
                     ),
