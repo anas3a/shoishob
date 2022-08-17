@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.deepPurple,
       ),
-      initialRoute: '/sports_page',
+      initialRoute: '/',
       routes: {
         '/': (context) => const WelcomePage(),
         '/logIn_page': (context) => const LogInPage(),

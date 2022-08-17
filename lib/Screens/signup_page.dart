@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import 'home.dart';
-
 class SignUpPage extends StatefulWidget {
   const SignUpPage({Key? key}) : super(key: key);
 
@@ -29,7 +27,7 @@ class _SignUpPageState extends State<SignUpPage> {
         decoration: const BoxDecoration(color: Colors.white),
         child: SingleChildScrollView(
           child: Padding(
-            padding: EdgeInsets.symmetric(vertical: 20, horizontal: isOrientationLandscape() ? size.width * .15 : 40),
+            padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 40),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
