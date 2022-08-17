@@ -90,7 +90,8 @@ class _SignUpPageState extends State<SignUpPage> {
                   child: TextField(
                     keyboardType: TextInputType.number,
                     inputFormatters: <TextInputFormatter>[
-                  FilteringTextInputFormatter.digitsOnly],
+                      FilteringTextInputFormatter.digitsOnly
+                    ],
                     decoration: const InputDecoration(
                       labelText: 'Age',
                       border: InputBorder.none,

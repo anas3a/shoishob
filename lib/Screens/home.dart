@@ -278,7 +278,7 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                                 gradient: const LinearGradient(
                                   colors: [
                                     Color(0xffAD9BFF),
-                                    Color(0xff9079FB)
+                                    Color(0xff9079FB),
                                   ],
                                   begin: Alignment.centerLeft,
                                   end: Alignment.centerRight,
