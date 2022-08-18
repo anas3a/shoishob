@@ -1,7 +1,6 @@
 import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:shoishob/Screens/football_page.dart';
 import 'package:shoishob/Screens/health_page.dart';
 import 'package:shoishob/Screens/ranking_page.dart';
 import 'package:shoishob/Screens/transportation_page.dart';
@@ -267,11 +266,7 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                                 horizontal: 4.0, vertical: 15),
                             child: GestureDetector(
                               onTap: () {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) =>
-                                            const FootballPage()));
+                                Navigator.pushNamed(context, '/sports_page');
                               },
                               child: Container(
                                 width: (size.width - 44 - 16) * .5,
@@ -281,12 +276,11 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                                   gradient: const LinearGradient(
                                     colors: [
                                       Color(0xffAD9BFF),
-                                      Color(0xff9079FB)
+                                      Color(0xff9079FB),
                                     ],
                                     begin: Alignment.centerLeft,
                                     end: Alignment.centerRight,
                                   ),
-
                                   boxShadow: const [
                                     BoxShadow(
                                       color: Color(0xffAD9BFF),
