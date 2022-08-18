@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shoishob/Screens/football_page.dart';
 
 class SportsPage extends StatefulWidget {
   const SportsPage({Key? key}) : super(key: key);
@@ -44,8 +45,7 @@ class _SportsPageState extends State<SportsPage> {
                       icon: const Icon(Icons.arrow_back_rounded),
                     ),
                     IconButton(
-                      onPressed: () {
-                      },
+                      onPressed: () {},
                       icon: const Icon(Icons.notifications_none_rounded),
                     )
                   ],
@@ -96,36 +96,37 @@ class _SportsPageState extends State<SportsPage> {
                             borderRadius: BorderRadius.circular(12),
                             color: Colors.white,
                             child: InkWell(
-                              onTap: (){
-                              },
+                              onTap: () {},
                               child: Padding(
                                 padding: const EdgeInsets.all(15),
                                 child: Row(
                                   children: [
                                     Column(
-                                      mainAxisAlignment: MainAxisAlignment.start,
-                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.start,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
                                         children: const [
-                                      Text(
-                                        'Cricket',
-                                        style: TextStyle(
-                                          fontSize: 20,
-                                          fontWeight: FontWeight.w600,
-                                          color: Color(0xFF172951),
-                                        ),
-                                      ),
-                                      SizedBox(
-                                        height: 5,
-                                      ),
-                                      Text(
-                                        'last played 1 hour ago',
-                                        style: TextStyle(
-                                          fontSize: 11,
-                                          fontWeight: FontWeight.w400,
-                                          color: Color(0xFF747B8B),
-                                        ),
-                                      ),
-                                    ]),
+                                          Text(
+                                            'Cricket',
+                                            style: TextStyle(
+                                              fontSize: 20,
+                                              fontWeight: FontWeight.w600,
+                                              color: Color(0xFF172951),
+                                            ),
+                                          ),
+                                          SizedBox(
+                                            height: 5,
+                                          ),
+                                          Text(
+                                            'last played 1 hour ago',
+                                            style: TextStyle(
+                                              fontSize: 11,
+                                              fontWeight: FontWeight.w400,
+                                              color: Color(0xFF747B8B),
+                                            ),
+                                          ),
+                                        ]),
                                     const Spacer(),
                                     Icon(Icons.sports_cricket_outlined),
                                   ],
@@ -142,15 +143,22 @@ class _SportsPageState extends State<SportsPage> {
                             borderRadius: BorderRadius.circular(12),
                             color: Colors.white,
                             child: InkWell(
-                              onTap: (){
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            const FootballPage()));
                               },
                               child: Padding(
                                 padding: const EdgeInsets.all(15),
                                 child: Row(
                                   children: [
                                     Column(
-                                        mainAxisAlignment: MainAxisAlignment.start,
-                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.start,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
                                         children: const [
                                           Text(
                                             'Football',
@@ -188,15 +196,16 @@ class _SportsPageState extends State<SportsPage> {
                             borderRadius: BorderRadius.circular(12),
                             color: Colors.white,
                             child: InkWell(
-                              onTap: (){
-                              },
+                              onTap: () {},
                               child: Padding(
                                 padding: const EdgeInsets.all(15),
                                 child: Row(
                                   children: [
                                     Column(
-                                        mainAxisAlignment: MainAxisAlignment.start,
-                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.start,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
                                         children: const [
                                           Text(
                                             'Kabaddi',
@@ -234,15 +243,16 @@ class _SportsPageState extends State<SportsPage> {
                             borderRadius: BorderRadius.circular(12),
                             color: Colors.white,
                             child: InkWell(
-                              onTap: (){
-                              },
+                              onTap: () {},
                               child: Padding(
                                 padding: const EdgeInsets.all(15),
                                 child: Row(
                                   children: [
                                     Column(
-                                        mainAxisAlignment: MainAxisAlignment.start,
-                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.start,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
                                         children: const [
                                           Text(
                                             'Tennis',
@@ -280,15 +290,16 @@ class _SportsPageState extends State<SportsPage> {
                             borderRadius: BorderRadius.circular(12),
                             color: Colors.white,
                             child: InkWell(
-                              onTap: (){
-                              },
+                              onTap: () {},
                               child: Padding(
                                 padding: const EdgeInsets.all(15),
                                 child: Row(
                                   children: [
                                     Column(
-                                        mainAxisAlignment: MainAxisAlignment.start,
-                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.start,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
                                         children: const [
                                           Text(
                                             'Basketball',
@@ -326,15 +337,16 @@ class _SportsPageState extends State<SportsPage> {
                             borderRadius: BorderRadius.circular(12),
                             color: Colors.white,
                             child: InkWell(
-                              onTap: (){
-                              },
+                              onTap: () {},
                               child: Padding(
                                 padding: const EdgeInsets.all(15),
                                 child: Row(
                                   children: [
                                     Column(
-                                        mainAxisAlignment: MainAxisAlignment.start,
-                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.start,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
                                         children: const [
                                           Text(
                                             'Martial Arts',
