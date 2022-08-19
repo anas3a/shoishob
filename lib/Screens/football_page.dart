@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shoishob/Screens/football_career_stats.dart';
 import 'package:shoishob/Screens/football_stats_page.dart';
 
 class FootballPage extends StatefulWidget {
@@ -71,7 +72,7 @@ class _FootballPageState extends State<FootballPage> {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const FootballStatsPage()));
+                          builder: (context) => const FootballCareerStats()));
                 },
                 child: Container(
                   decoration: BoxDecoration(
