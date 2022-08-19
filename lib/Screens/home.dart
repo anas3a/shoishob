@@ -87,37 +87,23 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                         height: (size.width - 44) * .11,
                       ),
                       SizedBox(
-                        width: (size.width - 44) * .11,
+                        width: (size.width - 44) * .09,
                       ),
                       SizedBox(
                         width: !isOrientationLandscape()
-                            ? (size.width - 44) * .52
-                            : (size.height - 44) * .52,
-                        child: Center(
-                          child: Row(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Image.asset(
-                                'assets/images/wavingHand.png',
-                                width: !isOrientationLandscape()
-                                    ? (size.width - 44) * .13
-                                    : (size.height - 44) * .13,
-                                height: !isOrientationLandscape()
-                                    ? (size.width - 44) * .13
-                                    : (size.height - 44) * .13,
-                              ),
-                              const Text(
-                                'hello kira!',
-                                style: TextStyle(
-                                    fontWeight: FontWeight.bold, fontSize: 21),
-                              ),
-                            ],
+                            ? (size.width - 44) * .56
+                            : (size.height - 44) * .56,
+                        child: const Center(
+                          child: Text(
+                            ' hi, inan ansary!',
+                            overflow: TextOverflow.clip,
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold, fontSize: 21),
                           ),
                         ),
                       ),
                       SizedBox(
-                        width: (size.width - 44) * .11,
+                        width: (size.width - 44) * .09,
                       ),
                       Container(
                         width: !isOrientationLandscape()
