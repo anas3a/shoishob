@@ -79,7 +79,7 @@ class _RankingStatsPageState extends State<RankingStatsPage> {
                                   : (size.height - 44) * .13,
                             ),
                             const Text(
-                              'hello kira!',
+                              'hello anas!',
                               style: TextStyle(
                                   fontWeight: FontWeight.bold, fontSize: 21),
                             ),
@@ -455,7 +455,7 @@ class _RankingStatsPageState extends State<RankingStatsPage> {
                                   padding: EdgeInsets.only(
                                       left: 15.0, bottom: 5, right: 15),
                                   child: Text(
-                                    'Anika Rahman',
+                                    'Anas Ansary',
                                     style: TextStyle(
                                         color: Colors.black,
                                         fontSize: 19,
@@ -551,7 +551,7 @@ class _RankingStatsPageState extends State<RankingStatsPage> {
                                   padding: EdgeInsets.only(
                                       left: 15.0, bottom: 5, right: 15),
                                   child: Text(
-                                    'Robert Ank',
+                                    'Shahriar inan',
                                     style: TextStyle(
                                         color: Colors.black,
                                         fontSize: 19,

@@ -63,7 +63,7 @@ class _HealthPageState extends State<HealthPage> {
                 const Padding(
                   padding: EdgeInsets.symmetric(vertical: 11.0),
                   child: Text(
-                    'Good morning,\nKira!',
+                    'Good morning,\nanas!',
                     style: TextStyle(fontSize: 29, fontWeight: FontWeight.bold),
                   ),
                 ),
