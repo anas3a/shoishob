@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shoishob/Screens/football_match_page.dart';
 import 'package:shoishob/Screens/football_page.dart';
 
 class SportsPage extends StatefulWidget {
@@ -96,59 +97,12 @@ class _SportsPageState extends State<SportsPage> {
                             borderRadius: BorderRadius.circular(12),
                             color: Colors.white,
                             child: InkWell(
-                              onTap: () {},
-                              child: Padding(
-                                padding: const EdgeInsets.all(15),
-                                child: Row(
-                                  children: [
-                                    Column(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.start,
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        children: const [
-                                          Text(
-                                            'Cricket',
-                                            style: TextStyle(
-                                              fontSize: 20,
-                                              fontWeight: FontWeight.w600,
-                                              color: Color(0xFF172951),
-                                            ),
-                                          ),
-                                          SizedBox(
-                                            height: 5,
-                                          ),
-                                          Text(
-                                            'last played 1 hour ago',
-                                            style: TextStyle(
-                                              fontSize: 11,
-                                              fontWeight: FontWeight.w400,
-                                              color: Color(0xFF747B8B),
-                                            ),
-                                          ),
-                                        ]),
-                                    const Spacer(),
-                                    Icon(Icons.sports_cricket_outlined),
-                                  ],
-                                ),
-                              ),
-                            ),
-                          ),
-                          const SizedBox(
-                            height: 20,
-                          ),
-                          Material(
-                            elevation: 5,
-                            shadowColor: Colors.deepPurple,
-                            borderRadius: BorderRadius.circular(12),
-                            color: Colors.white,
-                            child: InkWell(
                               onTap: () {
                                 Navigator.push(
                                     context,
                                     MaterialPageRoute(
                                         builder: (context) =>
-                                            const FootballPage()));
+                                            const FootballMatchPage()));
                               },
                               child: Padding(
                                 padding: const EdgeInsets.all(15),
@@ -182,6 +136,59 @@ class _SportsPageState extends State<SportsPage> {
                                         ]),
                                     const Spacer(),
                                     Icon(Icons.sports_soccer_outlined),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ),
+                          const SizedBox(
+                            height: 20,
+                          ),
+                          Material(
+                            elevation: 5,
+                            shadowColor: Colors.deepPurple,
+                            borderRadius: BorderRadius.circular(12),
+                            color: Colors.white,
+                            child: InkWell(
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                        const FootballMatchPage()));
+                              },
+                              child: Padding(
+                                padding: const EdgeInsets.all(15),
+                                child: Row(
+                                  children: [
+                                    Column(
+                                        mainAxisAlignment:
+                                        MainAxisAlignment.start,
+                                        crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                        children: const [
+                                          Text(
+                                            'Cricket',
+                                            style: TextStyle(
+                                              fontSize: 20,
+                                              fontWeight: FontWeight.w600,
+                                              color: Color(0xFF172951),
+                                            ),
+                                          ),
+                                          SizedBox(
+                                            height: 5,
+                                          ),
+                                          Text(
+                                            'last played 1 hour ago',
+                                            style: TextStyle(
+                                              fontSize: 11,
+                                              fontWeight: FontWeight.w400,
+                                              color: Color(0xFF747B8B),
+                                            ),
+                                          ),
+                                        ]),
+                                    const Spacer(),
+                                    Icon(Icons.sports_cricket_outlined),
                                   ],
                                 ),
                               ),
