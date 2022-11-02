@@ -4,6 +4,7 @@ import 'package:shoishob/Screens/login_page.dart';
 import 'package:shoishob/Screens/signup_page.dart';
 import 'package:shoishob/Screens/home.dart';
 import 'package:shoishob/Screens/sports_page.dart';
+import 'package:shoishob/Screens/health_page2.dart';
 
 void main() {
   runApp(const MyApp());
@@ -27,6 +28,7 @@ class MyApp extends StatelessWidget {
         '/singUp_page': (context) => const SignUpPage(),
         '/home': (context) => const Home(),
         '/sports_page': (context) => const SportsPage(),
+        '/health_page2': (contest) => const HealthPage2(),
       },
     );
   }

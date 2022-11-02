@@ -152,11 +152,7 @@ class _SignUpPageState extends State<SignUpPage> {
                   alignment: Alignment.bottomRight,
                   child: GestureDetector(
                     onTap: (){
-
-                      Navigator.of(context).push(
-                          MaterialPageRoute(builder: (context) => const Home())
-                      );
-
+                          Navigator.pushNamed(context, '/home');
                     },
                     child: Card(
                       color: const Color(0xFF8C77CE),
