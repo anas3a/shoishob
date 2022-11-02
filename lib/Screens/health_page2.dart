@@ -22,7 +22,6 @@ class _HealthPage2State extends State<HealthPage2> {
       for (var info in infoList) {
         sum += (info.usage.inHours);
       }
-      print(sum);
       setState(() {
         usage = sum;
       });
@@ -71,7 +70,7 @@ class _HealthPage2State extends State<HealthPage2> {
                     Spacer(),
                     IconButton(
                       onPressed: () {
-                        Navigator.pop(context);
+                        Navigator.pushNamed(context, '/workout_page');
                       },
                       icon: const Icon(Icons.self_improvement_rounded, size: 40, color: Colors.deepPurple,),
                     ),
