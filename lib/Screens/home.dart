@@ -466,11 +466,7 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                                 horizontal: 4.0, vertical: 15),
                             child: GestureDetector(
                               onTap: () {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) =>
-                                            const HealthPage()));
+                                Navigator.pushNamed(context, '/health_page2');
                               },
                               child: Container(
                                 width: (size.width - 44 - 16) * .5,
