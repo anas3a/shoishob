@@ -175,8 +175,8 @@ class _WorkOutPageState extends State<WorkOutPage> {
                                 ElevatedButton(
                                     onPressed: () {},
                                     style: ElevatedButton.styleFrom(
-                                      backgroundColor: Color(0xFFCFEAFF),
-                                      foregroundColor: Colors.black,
+                                      primary: Color(0xFFCFEAFF),
+                                      shadowColor: Colors.black,
                                       textStyle: TextStyle(
                                         fontSize: 17
                                       )
@@ -262,8 +262,8 @@ class _WorkOutPageState extends State<WorkOutPage> {
                                 ElevatedButton(
                                     onPressed: () {},
                                     style: ElevatedButton.styleFrom(
-                                        backgroundColor: Color(0xFFCFEAFF),
-                                        foregroundColor: Colors.black,
+                                        primary: Color(0xFFCFEAFF),
+                                        shadowColor: Colors.black,
                                         textStyle: TextStyle(
                                             fontSize: 17
                                         )
@@ -349,8 +349,8 @@ class _WorkOutPageState extends State<WorkOutPage> {
                                 ElevatedButton(
                                     onPressed: () {},
                                     style: ElevatedButton.styleFrom(
-                                        backgroundColor: Color(0xFFCFEAFF),
-                                        foregroundColor: Colors.black,
+                                        primary: Color(0xFFCFEAFF),
+                                        shadowColor: Colors.black,
                                         textStyle: TextStyle(
                                             fontSize: 17
                                         )
@@ -436,8 +436,8 @@ class _WorkOutPageState extends State<WorkOutPage> {
                                 ElevatedButton(
                                     onPressed: () {},
                                     style: ElevatedButton.styleFrom(
-                                        backgroundColor: Color(0xFFCFEAFF),
-                                        foregroundColor: Colors.black,
+                                        primary: Color(0xFFCFEAFF),
+                                        shadowColor: Colors.black,
                                         textStyle: TextStyle(
                                             fontSize: 17
                                         )

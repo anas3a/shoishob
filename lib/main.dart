@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shoishob/Screens/profile.dart';
 import 'package:shoishob/Screens/welcome_page.dart';
 import 'package:shoishob/Screens/login_page.dart';
 import 'package:shoishob/Screens/signup_page.dart';
@@ -24,6 +25,7 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: '/',
       routes: {
+        // '/': (context) => const Profile(),
         '/': (context) => const WelcomePage(),
         '/logIn_page': (context) => const LogInPage(),
         '/singUp_page': (context) => const SignUpPage(),
