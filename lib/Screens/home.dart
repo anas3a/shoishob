@@ -2,6 +2,7 @@ import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.da
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:shoishob/Screens/health_page.dart';
+import 'package:shoishob/Screens/profile.dart';
 import 'package:shoishob/Screens/ranking_page.dart';
 import 'package:shoishob/Screens/transportation_page.dart';
 
@@ -105,21 +106,30 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                       SizedBox(
                         width: (size.width - 44) * .09,
                       ),
-                      Container(
-                        width: !isOrientationLandscape()
-                            ? (size.width - 44) * .15
-                            : (size.height - 44) * .15,
-                        height: !isOrientationLandscape()
-                            ? (size.width - 44) * .15
-                            : (size.height - 44) * .15,
-                        decoration: BoxDecoration(
-                            color: const Color(0xffE2DAFD),
-                            borderRadius: BorderRadius.circular(1000)),
-                        child: Center(
-                          child: Image.asset(
-                            'assets/images/avatar.png',
-                            width: (size.width - 44) * .11,
-                            height: (size.width - 44) * .11,
+                      GestureDetector(
+                        onTap: (){
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) =>
+                                  const Profile()));
+                        },
+                        child: Container(
+                          width: !isOrientationLandscape()
+                              ? (size.width - 44) * .15
+                              : (size.height - 44) * .15,
+                          height: !isOrientationLandscape()
+                              ? (size.width - 44) * .15
+                              : (size.height - 44) * .15,
+                          decoration: BoxDecoration(
+                              color: const Color(0xffE2DAFD),
+                              borderRadius: BorderRadius.circular(1000)),
+                          child: Center(
+                            child: Image.asset(
+                              'assets/images/avatar.png',
+                              width: (size.width - 44) * .11,
+                              height: (size.width - 44) * .11,
+                            ),
                           ),
                         ),
                       )

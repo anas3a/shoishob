@@ -15,7 +15,7 @@ class _FootballMatchPageState extends State<FootballMatchPage> {
     var size = MediaQuery.of(context).size;
 
     return Scaffold(
-      backgroundColor: const Color(0xff051D2C),
+      backgroundColor: const Color(0xfff3f3f3),
       body: SingleChildScrollView(
         physics: const BouncingScrollPhysics(),
         child: Padding(
